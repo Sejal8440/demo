@@ -1,4 +1,144 @@
-<html>
-<head></head>
-<body>first page</body>
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+       [href ^= "http"] {
+            background:url(img/external.png) 100% 50% no-repeat;
+            padding-right:15px;
+        }
+        section:target, div:target {
+            background: #F9FDA2;
+        }
+
+        article, div {
+            position: relative;
+        }
+        section {
+            display: block;
+            position: absolute;
+            top: 10px;
+            left: 0;
+            background: #333;
+            color: #fff;
+            width: 100%;
+            min-height: 400px;
+        }
+
+        section:target {
+            z-index:2;
+        }
+
+        a:target {
+            background: #333;
+            color:#fff;
+            font-weight: bold;
+        }
+
+        #one:target ~ div > section#s-one,
+        #two:target ~ div > section#s-two,
+        #three:target ~ div > section#s-three,
+        #four:target ~ div > section#s-four,
+        section:first-of-type {
+            z-index: 2;
+        }
+
+        tr:nth-child(odd) {
+            background:#B0B0B0;
+        }
+    </style>
+</head>
+<body>
+    <p>perhaps the most animal astronaut is <a href="https://en.wikipedia.org/wiki/Laika">Laika</a>, the Soviet space dog who made her historic flight on November 3, 1957.</p>
+    <article>
+        <hgroup>
+            <h1>Miss Baker</h1>
+            <h2>First Lady of Space</h2>
+        </hgroup>
+        <nav>
+            <ol>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#flight">Flight</a></li>
+                <li><a href="#mission">Mission</a></li>
+                <li><a href="#retirement">Retirement</a></li>
+            </ol>
+        </nav>
+        <div id="introduction">
+            <p>...</p>
+        </div>
+        <section id="flight">
+            <h1>Miss Baker's Historic Flight</h1>
+            ...
+        </section>
+        <section id="mission">
+            <h1>The Mission</h1>
+            ...
+        </section>
+        <aside>
+            <h1>The US Space Program</h1>
+            ...
+        </aside>
+        <section id="retirement">
+            <h1>Life in Retirement</h1>
+            ...
+        </section>
+        <footer>
+            ...
+        </footer>
+    </article>
+
+    <article id="main">
+        <h1>Features</h1>
+        <a href="#s-one">One</a> | <a href="#s-two">Two</a> | <a href="#s-three">Three</a> | <a href="#s-four">Four</a>
+        <div>
+            <section id="s-one">
+                <h1>Section One</h1>
+                <p>This is section one text.</p>
+            </section>
+            <section id="s-two">
+                <h1>Section Two</h1>
+                <p>This is section two text.</p>
+            </section>
+            <section id="s-three">
+                <h1>Section Three</h1>
+                <p>This is section three text.</p>
+            </section>
+            <section id="s-four">
+                <h1>Section Four</h1>
+                <p>This is section four text.</p>
+            </section>
+        </div>
+    </article>
+
+    <table>
+        <tr>
+            <td>Jack</td>
+            <td>Sales</td>
+            <td>555-5555</td>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>Admin</td>
+            <td>555-5555</td>
+        </tr>
+        <tr>
+            <td>James</td>
+            <td>Sales</td>
+            <td>555-5555</td>
+        </tr>
+        <tr>
+            <td>Jordon</td>
+            <td>Sales</td>
+            <td>555-5555</td>
+        </tr>
+        <tr>
+            <td>Jill</td>
+            <td>Marketing</td>
+            <td>555-5555</td>
+        </tr>
+    </table>
+	
+</body>
 </html>
